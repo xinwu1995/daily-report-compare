@@ -30,10 +30,8 @@ html {
 
 body {
   font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
+  background: #e8e8e8;
   color: var(--ink);
-  max-width: 430px;
-  margin: 0 auto;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -42,6 +40,8 @@ body {
   max-width: 430px;
   margin: 0 auto;
   position: relative;
+  background: var(--bg);
+  min-height: 100vh;
 }
 
 .landing-img {
