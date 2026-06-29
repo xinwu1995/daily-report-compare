@@ -238,7 +238,7 @@ var DISTRICT_WEATHERS = [
 ];
 
 var compareState = {
-  open: true,
+  open: false,
   currentDay: 0,
   selectedAreas: [0, 1, 2, 3],
   expandedSections: { highlight: true }
@@ -356,7 +356,12 @@ function hideCompareAddPicker() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  renderComparePage();
+  document.getElementById('landingHotspot').addEventListener('click', function() {
+    document.getElementById('landingPage').style.display = 'none';
+    compareState.open = true;
+    document.getElementById('comparePage').classList.add('open');
+    renderComparePage();
+  });
 
   document.getElementById('compareContent').addEventListener('click', function(e) {
     var sectionHeader = e.target.closest('.compare-section-header');
